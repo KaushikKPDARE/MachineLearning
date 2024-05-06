@@ -8,21 +8,9 @@ from sklearn.cluster import KMeans
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 model = GPT2Model.from_pretrained("gpt2")
 
-
-text_data = [
-  "The sun rises in the east.",
-  "Machine learning is revolutionizing various industries.",
-  "Life is like a box of chocolates; you never know what you're gonna get.",
-  "The sky is blue, and the grass is green.",
-  "Traveling broadens the mind.",
-  "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-  "Time flies when you're having fun.",
-  "The only way to do great work is to love what you do.",
-  "Actions speak louder than words."
-]
 # Read text entries from the file and add them to the text_data list
 text_data = []
-with open('sample_text_entries.txt', 'r') as file:
+with open('./training_text_data.txt', 'r') as file:
     lines = file.readlines()
     text_data.extend([line.strip() for line in lines])
 
